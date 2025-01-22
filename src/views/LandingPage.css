@@ -1,0 +1,477 @@
+.landingPageHeaderDiv {
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  height: 200vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.titleSection {
+  margin-top: 5%;
+  height: 150vh;
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+@keyframes headerImage {
+  from {
+    transform: translateY(100%); /* Start off the screen from below */
+  }
+  to {
+    transform: translateY(0); /* Move to its normal position */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start fully transparent */
+  }
+  to {
+    opacity: 1; /* Fade to fully visible */
+  }
+}
+
+
+.titleSection img {
+  position: absolute;
+  top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 85%;
+  object-fit: cover; 
+  overflow: visible;
+  z-index: -1;
+  animation: headerImage 2s ease-out backwards;
+  will-change: transform;
+}
+
+.titleSectionText {
+  position: absolute;
+  bottom: 15%;  
+  left: 50%;  
+  transform: translateX(-50%); 
+  z-index: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  /* Initial state for opacity */
+  opacity: 0;
+  animation: fadeIn 1s ease-out 2s forwards; /* Delay starts after the headerImage animation */
+}
+
+
+.titleSection::before {
+  content: ''; 
+  position: absolute;
+  top: -50%; /* Adjust to cover the image's overflow */
+  left: 0;
+  width: 100%;
+  height: 150%; /* Increase height to match the overflowing image */
+  z-index: 1; /* Ensure it's above the image */
+}
+
+.titleSectionText h1,
+.titleSectionText h2,
+.titleSectionText h3 {
+  margin: 0; 
+  padding:0px 0px !important;
+  line-height: 1;
+}
+
+.titleSectionText h1,
+.titleSectionText p{
+  font-size: 3rem;
+  color: var(--light-text-color);
+  font-family: var(--main-font-family);
+  font-weight: normal;
+  line-height: 1.5;
+  padding: 0px 0px;
+  margin: 0;
+}
+
+.titleSectionText h1{
+  margin-bottom: 5%;
+}
+
+.titleSectionText h2{
+  font-size: 5rem;
+  color: var(--light-text-color);
+  font-family: var(--main-font-family);
+  font-weight: bold;
+  text-align: center;
+}
+
+.titleSectionText h3{
+  font-size: 8rem;
+  color: var(--dark-text-color);
+  font-family: var(--main-font-family);
+  font-weight: bold;
+}
+
+.solutions{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 125vh;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: var(--main-color);
+}
+
+.solutions h2{
+  color: var(--highlight-text-color);
+  font-family: var(--main-font-family);
+  font-size: 2rem;
+  margin-top: 5%;
+}
+
+.solutionsGrid {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  padding: 2%;
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
+  justify-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.contactsSection {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 76%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.contactsSection h1{
+  color: var(--light-text-color);
+  margin-bottom: 5%;
+  font-family: var(--main-font-family);
+}
+
+.line {
+  height: 2px;
+  background-color: white;
+  margin: auto;
+  width: 85%;
+  margin-bottom: 3%;
+}
+
+.browseAllGamesButton {
+  width: 50%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media only screen and (max-width: 1920px) {
+  .titleSectionText h1,
+  .titleSectionText p{
+    font-size: 1rem;
+  }
+  
+  .titleSectionText h2{
+    font-size: 3rem;
+  }
+  
+  .titleSectionText h3{
+    font-size: 6rem;
+  }
+  
+  .solutionsGrid {
+    gap: 1%;
+    padding: 2px;
+    width: 95%;
+    height: 95%;
+  }
+  
+  .contactsSection {
+    width: 63%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .solutionsGames {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    width: 60%;
+    height: 60%;
+  }
+
+  .contactsSection {
+    width: 96%;
+    padding-bottom: 1%;
+  }
+  
+  .line {
+    width: 55%;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .titleSectionText h1,
+  .titleSectionText p{
+    font-size: 1rem;
+  }
+  
+  .titleSectionText h2{
+    font-size: 3rem;
+  }
+  
+  .titleSectionText h3{
+    font-size: 4rem;
+  }
+
+  .titleSectionText {
+    transform: translateY(-35%);
+  }
+
+  .solutionsGrid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1%;
+    padding: 20px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    justify-items: center;
+    text-align: center;
+    justify-content: center;
+    overflow-y: auto; 
+  }
+  
+  .solutionsGrid > * {
+    flex: 1 0 calc(33% - 1%); 
+    max-width: calc(33% - 1%);
+    box-sizing: border-box; 
+  }
+
+
+  .contacts{
+    height: 100vh;
+  }
+
+  .landingPageContactsFormDiv{
+    width:80%;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+  .titleSectionText h1,
+  .titleSectionText p{
+    font-size: 1rem !important;
+  }
+  
+  .titleSectionText h2{
+    font-size: 2rem !important;
+  }
+  
+  .titleSectionText h3{
+    font-size: 3rem !important;
+  }
+
+  .titleSectionText {
+    transform: translateY(-15%);
+    left: 5%;
+  }
+
+  .solutionsGrid > * {
+    flex: 1 0 calc(95% - 1%); 
+    max-width: calc(95% - 1%);
+    box-sizing: border-box; 
+  }
+
+
+  .contactsBackground{
+    width: 300%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .titleSectionText h1,
+  .titleSectionText p{
+    font-size: 0.75rem !important;
+  }
+  
+  .titleSectionText h2{
+    font-size: 1.5rem !important;
+  }
+  
+  .titleSectionText h3{
+    font-size: 2.5rem !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .landingPageHeaderDiv {
+    height: 250vh;
+  }
+
+  .titleSection {
+    height: 200vh;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-aspect-ratio: 16/9) {
+  .landingPageHeaderDiv {
+    background-size: cover;
+  }
+}
+.landingPageTopDecor {
+  width: 10%;
+  margin-bottom: 1%;
+}
+
+.headers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landingPageHeaderBottomText {
+  color: var(--highlight-color);
+  font-size: calc(3rem + 6vw);
+  font-family: var(--main-font-family);
+  user-select: none;
+  line-height: 1;
+}
+
+.landingPageButton {
+  width: 50%;
+  margin: 5px auto;
+  padding: 0;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingPageButtonText {
+  color: #212121;
+  width: 100%;
+  font-size: 2vw;
+  font-family: RavenHell;
+  font-weight: medium;
+  -webkit-text-stroke: 1px solid #ffe2b6;
+  user-select: none;
+  white-space: nowrap;
+  text-wrap: nowrap;
+  margin: 10px;
+}
+
+.landingPageBottomDecoration {
+  width: 17%;
+  margin-bottom: 1%;
+}
+
+.landingPageScrollDown {
+  position: absolute;
+  width: calc(1rem + 1vw);
+  cursor: pointer;
+  bottom: 3%;
+}
+
+@media only screen and (max-width: 768px) {
+  .landingPageTopDecor {
+    width: 20%;
+  }
+
+  .landingPageHeaderTopText {
+    font-size: calc(1rem + 3vw);
+  }
+
+  .landingPageHeaderBottomText {
+    font-size: calc(2rem + 6vw);
+  }
+
+  .landingPageButton {
+    width: 50%;
+  }
+
+  .landingPageButtonText {
+    font-size: 4vw;
+  }
+
+  .landingPageBottomDecoration {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .landingPageTopDecor {
+    width: 30%;
+  }
+  .landingPageButton {
+    width: 70vw;
+  }
+  .landingPageButtonText {
+    font-size: 5vw;
+  }
+
+  .landingPageBottomDecoration {
+    width: 50%;
+  }
+}

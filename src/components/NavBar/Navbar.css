@@ -1,0 +1,233 @@
+
+.navbar-custom-style {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+}
+
+.customNavbarBrand{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.customNavbarBrand span{
+    color:var(--navbar-brand-text-color);
+    font-family:var(--navbar-brand-text-font-family);
+}
+
+.custom-nav-link {
+    font-family: var(--navbar-text-font-family), sans-serif;
+    font-size : 1vw;
+    white-space: nowrap;
+
+
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    height: 100%; /* Match the height of the navbar */
+    border-bottom: 3px solid transparent; /* Default border for hover effect */
+}
+
+.custom-nav-link:hover{
+    border-bottom: 3px solid var(--highlight-color);
+}
+
+
+.navbar-dark {
+    .nav-link {
+        &.active {
+            border-bottom: 3px solid var(--highlight-color);
+        }
+    }
+}
+
+
+.navbarExpander {
+    width: 100%;
+    padding-right: 0px !important;
+    background-color: var(--navbar-background-color); /* Adjust the color and opacity */
+    border-bottom: 2px solid var(--navbar-bottom-border-color);
+    position: relative; /* Ensure proper positioning for child elements */
+}
+
+.navbarBackground {
+    display: block; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: auto; 
+    opacity: 0.2; 
+    pointer-events: none;
+}
+
+.navbarExpander > .container-fluid {
+    padding: 0 !important;
+  }
+
+.collapse {
+    box-shadow: none;
+}
+
+.collapse-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner-div {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    width: 7.5%;
+    margin-right: .5%;
+    height: auto;
+    mix-blend-mode: normal;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.brand-name-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name-span {
+    color: white;
+    font-weight: normal;
+    font-size: 1vw;
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+.navbar-custom-style {
+    align-items: center;
+    margin-left: auto;
+    padding-right: 15%;
+}
+
+.maintenance_banner{
+    position: fixed;
+    top:0vh;
+    left:0;
+    width: 100%;
+    background-color: var(--navbar-background-color);
+
+    height: 5vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.maintenance_banner_span{
+    color:white;
+    text-align: center;
+}
+
+
+.collapse-image-div::before {
+    content: '';
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background-color: var(--navbar-background-color);
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+}
+
+.navbarBrandName{
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.navbarBrandName2{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+}
+
+.navbarBrandDiv{
+    display:flex;
+    flex-direction:column;
+    line-height: 1;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .navbar-custom-style {
+        padding-right: 0%;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .customNavbarBrand{
+        margin-left: 5%;
+    }
+    
+    .collapse-image-div::before {
+        height: 1px;
+    }
+
+    .brand {
+        width: 10vw;
+    }
+
+    .language-selection-div {
+        margin: auto;
+        padding-left: 5%;
+    }
+
+    .navbar-custom-style {
+        padding-right: 0% !important;
+        padding-top: 10%;
+        padding-bottom: 20%;
+    }
+
+    .collapse {
+        overflow:unset;
+    }
+
+    .mobileMenuBottomLine{
+        height: 1px;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .mobileMenuBottomDecor{
+        height: auto;
+    }
+
+    .navbarBrandName{
+        text-wrap: wrap;
+        text-indent: 0%;
+        text-align: center;
+    }
+
+    .navbarBrandName2{
+        text-wrap: wrap;
+        text-indent: 0%;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 355px) {
+    .navbarBackground {
+        width: 100%; 
+        height: 100%; 
+    }
+}
+

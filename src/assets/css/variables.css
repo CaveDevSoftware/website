@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'ChakraPetch';
+    src: url('../fonts/ChakraPetch-Regular.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+:root {
+    --main-color: #00061b;
+    --highlight-color: #187b99;
+    --background-color: #00061b;
+    --light-background-color: #eaeaea;
+
+    --transition-speed : 0.3s;
+
+    --main-font-family: 'ChakraPetch';
+
+    --main-text-color: #eaeaea;
+    --secondary-text-color: #187b99;
+
+    --dark-text-color: #eaeaea;
+    --light-text-color: #eaeaea;
+    --highlight-text-color: #187b99;
+    --light-contrast-text-color: #eaeaea;
+
+    --main-border-radius: 3px;
+
+    /* Navbar */
+    --navbar-background-color: #00061b;
+    --navbar-bottom-border-color: #187b99;
+    --navbar-text-font-family:'ChakraPetch';
+
+    --navbar-text-color: #eaeaea;
+    --navbar-active-text-color: #187b99;
+    --navbar-hover-text-color: #187b99;
+
+    --navbar-brand-text-color:#eaeaea;
+    --navbar-brand-text-font-family:'ChakraPetch';
+
+
+    /* Footer */
+    --footer-background-color: #eaeaea;
+    --footer-text-color: #00061b;
+    --footer-border-top-color : #187b99;
+    --footer-text-font-family:'ChakraPetch';
+
+
+    /* Input Fields */
+    --input-field-text-family:'ChakraPetch';
+
+
+    /* Buttons */
+    --primary-button-background-color: #187b99;
+    --primary-button-text-color: #00061b;
+    --primary-button-border-color: #187b99;
+
+    --primary-button-hover-background-color: #00061b;
+    --primary-button-hover-text-color: #187b99;
+    --primary-button-hover-border-color: #187b99;
+
+    --primary-button-border-radius: 3px;
+    --primary-button-transition-speed: 0.3s;
+    --primary-button-text-family:'ChakraPetch';
+
+
+
+
+    --secondary-button-background-color: #187b99;
+    --secondary-button-text-color: #00061b;
+    --secondary-button-border-color: #187b99;
+
+    --secondary-button-hover-background-color: #00061b;
+    --secondary-button-hover-text-color: #187b99;
+    --secondary-button-hover-border-color: #187b99;
+
+    --secondary-button-border-radius: 3px;
+
+
+    /* Clicable Texts */
+    --clicable-text-color:#187b99;
+    --clicable-text-hover-color:#eaeaea;
+
+    --clicable-text-transition-speed:0.3s;
+    --clicable-text-text-family:'ChakraPetch';
+}
+
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--main-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--highlight-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #eaeaea;
+}
+
+
+.authHeader{
+    font-family: var(--main-font-family);
+    color: var(--highlight-text-color);
+    font-size: 4rem;
+    align-self: center;
+}
+
+@media only screen and (max-width: 320px) {
+    .authHeader{
+        font-size: 3rem;
+    }
+}
+
+
+.modularInputField div{
+    padding: 2px;
+    background-color: var(--main-color);
+    border: 2px solid var(--highlight-color);
+    border-radius: 3px;
+    width: 100%;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modularInputField div input{
+    font-weight: normal;
+    background-color: transparent;
+    font-family: var(--input-field-text-family), sans-serif;
+    border-radius: 3px;
+    color: var(--highlight-color);
+    padding: 20px;
+    padding-left: 5%;
+    border: none;
+    width: 100%;
+    margin: 0;
+    outline: none;
+}
+
+.modularInputField div input::placeholder{
+    color: var(--highlight-color);
+}
+
+.modularInputField div input:focus{
+    border: transparent;
+}
+
+.modularInputField div textarea{
+    font-weight: normal;
+    background-color: transparent;
+    font-family: var(--input-field-text-family), sans-serif;
+    border-radius: 3px;
+    color: var(--highlight-color);
+    padding: 20px;
+    padding-left: 5%;
+    border: none;
+    width: 100%;
+    margin: 0;
+    outline: none;
+    resize: none;
+}
+
+.modularInputField div textarea::placeholder{
+    color: var(--highlight-color);
+}
+
+.modularInputField div textarea:focus{
+    border: transparent;
+}
+
+
+
+.modularInputField div span{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
+
+
+.modularPrimaryButton{
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: var(--primary-button-text-family), sans-serif;
+    font-weight: bold;
+    color: var(--primary-button-text-color);
+    background-color: var(--primary-button-background-color);
+    border: 1px solid var(--primary-button-border-color);
+    border-radius: var(--primary-button-border-radius);
+    transition: color var(--primary-button-transition-speed) ease, background-color var(--primary-button-transition-speed) ease, border-color var(--primary-button-transition-speed) ease;
+    z-index: 1;
+}
+
+.modularPrimaryButton:hover{
+    color: var(--primary-button-hover-text-color);
+    background-color: var(--primary-button-hover-background-color);
+    border: 1px solid var(--primary-button-hover-border-color);
+}
+
+
+.modularClicableText{
+    color: var(--clicable-text-color);
+    font-family: var(--clicable-text-text-family), sans-serif;
+    transition: color var(--clicable-text-transition-speed) ease, background-color var(--clicable-text-transition-speed) ease, border-color var(--clicable-text-transition-speed) ease;
+}
+
+.modularClicableText:hover{
+    color: var(--clicable-text-hover-color);
+}

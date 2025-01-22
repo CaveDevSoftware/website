@@ -1,0 +1,28 @@
+
+.customFooter{
+  border-top: 2px solid var(--footer-border-top-color);
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  background-color: var(--footer-background-color);
+  height:50px;
+  z-index: 1;
+}
+
+.customFooter div{
+  display:flex;
+  flex-direction: row;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.customFooter div button{
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align:center;
+  text-wrap:nowrap;
+  font-family: var(--footer-text-font-family), sans-serif;
+}

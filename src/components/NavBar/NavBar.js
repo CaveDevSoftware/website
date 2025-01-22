@@ -77,7 +77,7 @@ const TopNavbar = ({ routes = [{}], logo }) => {
   
 
   function handleBrandClick() {
-    window.location.href = "/cavedevsofware/";
+    window.location.href = "/website/";
   }
 
   return (

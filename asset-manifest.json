@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/website/static/css/main.25e25ab5.css",
-    "main.js": "/website/static/js/main.9264273a.js",
+    "main.js": "/website/static/js/main.1156a8eb.js",
     "static/media/headerBackground.png": "/website/static/media/headerBackground.fd1550fc14360cf1792c.png",
     "static/media/brand_logo.png": "/website/static/media/brand_logo.550728328705c71e08da.png",
     "static/media/ChakraPetch-Regular.ttf": "/website/static/media/ChakraPetch-Regular.f4019d33aae25f6d8eaf.ttf",
@@ -11,6 +11,6 @@
   },
   "entrypoints": [
     "static/css/main.25e25ab5.css",
-    "static/js/main.9264273a.js"
+    "static/js/main.1156a8eb.js"
   ]
 }

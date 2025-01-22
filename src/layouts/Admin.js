@@ -16,7 +16,7 @@ const Admin = (props) => {
 
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/cavedevsofware") {
+      if (prop.layout === "/website") {
         return (
           <Route path={prop.path} element={prop.component} key={key} exact />
         );
@@ -45,14 +45,14 @@ const Admin = (props) => {
         <div className="main-content" ref={mainContent} style={{ position: 'absolute', top:'0', height:'100vh', width:'100%'}}>
           <Routes>
             {getRoutes(routes)}
-            <Route path="*" element={<Navigate to="/gamevasionsignup/" replace />} />
+            <Route path="*" element={<Navigate to="/website/" replace />} />
           </Routes>
         </div>
         <NavBar
           {...props}
           routes={routes}
           logo={{
-            innerLink: "/cavedevsofware/",
+            innerLink: "/website/",
             imgSrc: require("../assets/img/brand/brand_logo.png"),
             imgAlt: "...",
           }}

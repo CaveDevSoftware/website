@@ -5,7 +5,7 @@ var routes = [
     path: "/",
     name: "navbar.landing_page",
     component: <LandingPage />,
-    layout: "/cavedevsofware",
+    layout: "/website",
     hidden: true,
     requires_login: false,
     requires_logged_out: true,

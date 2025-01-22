@@ -15,8 +15,8 @@ export default function App() {
           <ToastProvider>
             <BrowserRouter>
               <Routes>
-                <Route path="/cavedevsofware/*" element={<AdminLayout />} />
-                <Route path="*" element={<Navigate to="/cavedevsofware/" replace />} />
+                <Route path="/website/*" element={<AdminLayout />} />
+                <Route path="*" element={<Navigate to="/website/" replace />} />
               </Routes>
             </BrowserRouter>
           </ToastProvider>
